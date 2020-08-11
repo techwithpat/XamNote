@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamNote.Views.HomeView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="{StaticResource WhiteSmoke}">
+    <Grid Margin="5">
+        <CollectionView ItemsSource="{Binding Notes}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedNote, Mode=OneWayToSource}"
+                        x:Name="NoteCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Title}"
+                               Style="{StaticResource NoteItemTitleStyle}"/>
+
+                        <Label Text="{Binding CreateAt, StringFormat='{0:dddd dd/MM/yyyy}'}"
+                               FontSize="Caption"/>
+
+                        <BoxView HeightRequest="0.5"
+                                 Margin="0,20,0,0"
+                                 BackgroundColor="{StaticResource GrayishCyan}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+
+        </CollectionView>
+
+        <Button Text="+"
+                Command="{Binding AddNoteCommand}"
+                Style="{StaticResource AddNoteButtonStyle}"/>
+    </Grid>
+</ContentPage>

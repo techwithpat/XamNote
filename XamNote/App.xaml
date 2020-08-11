@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="XamNote.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Colors-->
+            <Color x:Key="WhiteSmoke">#f5f5f5</Color>
+            <Color x:Key="BrightRed">#e63946</Color>
+            <Color x:Key="VeryDarkBlue">#1d3557</Color>
+            <Color x:Key="GrayishCyan">#b5b9b9</Color>
+
+            <!--Styles-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource BrightRed}"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="NoteItemTitleStyle">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="TextColor" Value="{StaticResource VeryDarkBlue}" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="AddNoteButtonStyle" >
+                <Setter Property="WidthRequest" Value="60" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BorderRadius" Value="30" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BrightRed}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="End" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

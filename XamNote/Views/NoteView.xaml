@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamNote.Views.NoteView">
+   <ContentPage.ToolbarItems>
+       <ToolbarItem Text="Save"
+                    Command="{Binding SaveNoteCommand}"/>
+   </ContentPage.ToolbarItems>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Entry Grid.Row="0"
+               Placeholder="Title"
+               Text="{Binding Note.Title}"/>
+
+        <Editor Grid.Row="1"
+                Placeholder="Content"
+                Text="{Binding Note.Content}"/>
+    </Grid>
+</ContentPage>
