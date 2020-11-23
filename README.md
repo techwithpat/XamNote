@@ -1,5 +1,5 @@
 # XamNote
-A note taking app in Xamarin Forms that uses SQLite as database.
+A note-taking app in Xamarin Forms that uses SQLite as a database.
 
 This is a companion code for youtube tutorial :
 
